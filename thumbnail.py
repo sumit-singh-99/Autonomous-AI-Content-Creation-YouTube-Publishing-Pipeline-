@@ -3,9 +3,12 @@ import requests
 import random
 from PIL import Image
 from io import BytesIO
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- Configuration ---
-PEXELS_API_KEY = "IaAfXcvQG2iHn0R2dkP8Qb4fQzxewOmp286QkfgOThsGGF0Z9rYi6E08"  # Put your valid API key here
+PEXELS_API_KEY = os.getenv("PEXELS_API_KEY")  # Put your valid API key here
 THUMBNAIL_DIR = "thumbnails"
 
 # Ensure the thumbnail directory exists

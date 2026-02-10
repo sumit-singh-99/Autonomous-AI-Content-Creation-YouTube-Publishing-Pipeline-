@@ -7,6 +7,9 @@ from googleapiclient.http import MediaFileUpload
 from googleapiclient.errors import HttpError
 from google.auth.transport.requests import Request
 import google.generativeai as genai
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # === Dynamic Paths ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +20,7 @@ CREDENTIALS_FILE = os.path.join(BASE_DIR, "client_secret.json")
 TOKEN_FILE = os.path.join(BASE_DIR, "token.pickle")
 
 # === API Keys ===
-GEMINI_API_KEY = "AIzaSyAfh4RyUz4pu0V0XIroXDsSDYUjkdTn_kQ"   # 🔑 Your Gemini API key
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # 🔑 Your Gemini API key
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube"]
 
 # === 🔥 Hardcoded Topic (edit this per video) ===
