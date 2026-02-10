@@ -136,7 +136,6 @@ Main_YT_Automation/
 ├── Overlay.py             # Text overlay utilities
 ├── Upload.py              # YouTube upload functionality
 ├── thumbnail.py           # Thumbnail generation
-├── InstaUploadSetup.py    # Instagram upload setup
 ├── __init__.py
 ├── downloaded_clips/      # Temporary video clips
 ├── logs/                  # Application logs
