@@ -6,6 +6,9 @@ import subprocess
 from google import genai
 import textwrap
 import shutil
+from dotenv import load_dotenv
+
+load_dotenv()
 
 THUMBNAIL_DIR = "thumbnails"
 
@@ -169,7 +172,7 @@ def append_thumbnail_to_video_with_audio(video_path: str, thumbnail_path: str, o
 # Main Function
 # ---------------------------
 if __name__ == "__main__":
-    API_KEY = "AIzaSyCjS_eao0IarL5JOyT_aof_3eHnxNCcOMY"  # 🔑 Replace with your Gemini API key
+    API_KEY = os.getenv("GEMINI_API_KEY")  # 🔑 Replace with your Gemini API key
     TOPIC = "The Future of Renewable Energy"
 
     THUMBNAIL_PATH = f"{THUMBNAIL_DIR}/thumbnail.jpg"
