@@ -389,6 +389,7 @@ def create_segmented_contextual_video(topic, tts_text, audio_path, audio_duratio
 
 
 def select_topic_using_gemini():
+    print("\nSelecting topic using Gemini...")
     """
     Use Gemini to select a trending or interesting topic for the video.
     Ensures topics are not repeated too frequently (max 2–3 repeats allowed).
@@ -484,6 +485,7 @@ def select_topic_using_gemini():
 # 6) MAIN pipeline
 # ============================
 if __name__ == "__main__":
+    print("Starting video creation pipeline...")
     topic = select_topic_using_gemini()
     # 1) script + TTS
     script_text, tts_text, audio_duration = generate_script_and_speech(topic)
